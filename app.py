@@ -9,8 +9,8 @@ app=Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 # CORS(app)
 
-app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:root@localhost/motordreamers1'
-# app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://hmollis:BDHernanM@hmollis.mysql.pythonanywhere-services.com/hmollis$Proyecto'
+# app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:root@localhost/motordreamers1'
+app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://hmollis:clave@hmollis.mysql.pythonanywhere-services.com/hmollis$Proyecto'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 
 db=SQLAlchemy(app)
