@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escuderias</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <a href="nueva_escuderia.html"><button type="button">Agregar Nueva Escuderia</button></a>
+    <br>
+    <br>
+    <div id="app" class="container">
+        <div id="escuderias" class="grilla">
+            <ul v-for="escuderia in escuderias">
+                <li>
+                    <div>
+                        <h2>{{escuderia.nombre}}</h2>
+                        <img class="logo-escuderia" v-bind:src="escuderia.logo" v-bind:alt="escuderia.nombre">
+                        <p class="datos"> Con Base en: <span class="dato-api">{{escuderia.base}}</span></p>
+                        <p class="datos"> Presidente: <span class="dato-api">{{escuderia.presidente}}</span></p>
+                        <p class="datos"> Director: <span class="dato-api">{{escuderia.director}}</span></p>
+                        <p class="datos"> Director Tecnico: <span class="dato-api">{{escuderia.dir_tecnico}}</span></p>
+                        <p class="datos"> Primera Participacion: <span
+                                class="dato-api">{{escuderia.primera_participacion}}</span></p>
+                        <p class="datos"> Chasis: <span class="dato-api">{{escuderia.chasis}}</span></p>
+                        <p class="datos"> Motor: <span class="dato-api">{{escuderia.motor}}</span></p>
+                        <p class="datos"> Neumaticos: <span class="dato-api">{{escuderia.neumaticos}}</span></p>
+                        <p class="datos"> Mejores vueltas: <span class="dato-api">{{escuderia.mejor_vuelta}}</span></p>
+                        <p class="datos"> Podios: <span class="dato-api">{{escuderia.pole_positions}}</span></p>
+                        <p class="datos"> Campeonatos: <span class="dato-api">{{escuderia.mundiales}}</span></p>
+                    </div>
+                    <div>
+                        <a v-bind:href="'editar_escuderia.html?id=' + escuderia.id"><button type="button">Editar</button></a>
+                        <button type="button" v-on:click="eliminar(escuderia.id)">Eliminar</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- <script src="./js/main_escuderias.js"></script> -->
+    <script src="./js/crear_eliminar_escuderia.js"></script>
+</body>
+
+</html>

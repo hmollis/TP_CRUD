@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva Escuderia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    <header id="header">
+        <!-- place navbar here -->
+    </header>
+    <main>
+        <div class="container" id="app">
+            <form style="background-color: aliceblue; margin: 10px auto; width: 400px; padding: 20px;">
+                <h1>Alta de Escuderia</h1>
+                <div class="mb-3">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" v-model="nombre">
+                </div>
+                <div class="mb-3">
+                    <label for="base">Base</label>
+                    <input type="text" name="base" id="base" v-model="base">
+                </div>
+                <div class="mb-3">
+                    <label for="presidente">Presidente</label>
+                    <input type="text" name="presidente" id="presidente" v-model="presidente">
+                </div>
+                <div class="mb-3">
+                    <label for="director">Director</label>
+                    <input type="text" name="director" id="director" v-model="director">
+                </div>
+                <div class="mb-3">
+                    <label for="dir_tecnico">Director Tecnico</label>
+                    <input type="text" name="dir_tecnico" id="dir_tecnico" v-model="dir_tecnico">
+                </div>
+                <div class="mb-3">
+                    <label for="primera_participacion">Primera Participacion</label>
+                    <input type="number" name="primera_participacion" id="primera_participacion" v-model="primera_participacion">
+                </div>
+                <div class="mb-3">
+                    <label for="chasis">Chasis</label>
+                    <input type="text" name="chasis" id="chasis" v-model="chasis">
+                </div>
+                <div class="mb-3">
+                    <label for="motor">Motor</label>
+                    <input type="text" name="motor" id="motor" v-model="motor">
+                </div>
+                <div class="mb-3">
+                    <label for="neumaticos">Neumaticos</label>
+                    <input type="text" name="neumaticos" id="neumaticos" v-model="neumaticos">
+                </div>
+                <div class="mb-3">
+                    <label for="mejor_vuelta">Cantidad de mejores vueltas</label>
+                    <input type="number" name="mejor_vuelta" id="mejor_vuelta" v-model="mejor_vuelta">
+                </div>
+                <div class="mb-3">
+                    <label for="pole_positions">Cantidad de podios</label>
+                    <input type="number" name="pole_positions" id="pole_positions" v-model="pole_positions">
+                </div>
+                <div class="mb-3">
+                    <label for="mundiales">Campeonatos mundiales ganados</label>
+                    <input type="number" name="mundiales" id="mundiales" v-model="mundiales">
+                </div>
+                <div class="mb-3">
+                    <label for="logo">Imagen</label>
+                    <input type="text" name="logo" id="logo" v-model="logo">
+                    <img width="200" :src="logo" alt="nombre">
+                </div>
+                <button type="button" class="btn btn-success" v-on:click="crear()">Grabar</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="./js/crear_eliminar_escuderia.js"></script>
+    <!-- <script src="./js/main_escuderias.js"></script> -->
+</body>
+
+</html>

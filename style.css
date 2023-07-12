@@ -1,0 +1,48 @@
+.grilla {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 5px;
+    grid-auto-flow: dense;
+    list-style: none;
+    margin: 1em auto;
+    padding: 0;
+    max-width: 900px;
+    background: pink;
+}
+
+.grilla li {
+    border: none;
+}
+
+.grilla li h2 {
+    font-family: 'built_titling', Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+}
+
+.grilla li.landscape {
+    grid-column-end: span 2;
+}
+
+.grilla li img {
+    display: block;
+    object-fit: scale-down;
+    width: 100%;
+    height: 100%;
+}
+
+.datos {
+    font-family: 'built_titling', Helvetica, sans-serif;
+    font-size: 0.7em;
+    font-weight: normal;
+}
+
+.dato-api {
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.img {
+    min-height: 150px;
+}
